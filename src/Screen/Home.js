@@ -278,11 +278,11 @@ const Home = ({navigation}) => {
     <View style={{flex: 1, backgroundColor: 'white'}}>
       {OpenModal()}
       <View style={styles.Header_View}>
-        <View style={styles.HerryText_View}>
+        <TouchableOpacity onPress={() =>{navigation.toggleDrawer()}} style={styles.HerryText_View}>
           <Text style={{fontWeight: '600', fontSize: 25, color: colors.black}}>
             Hi Harry!
           </Text>
-        </View>
+        </TouchableOpacity>
 
         <View style={styles.HeaderIconView}>
           <Image style={styles.InputIcons} source={IconPath.BETTERY} />
@@ -309,26 +309,17 @@ const Home = ({navigation}) => {
             horizontal
           />
         </View>
-        {/* <CalendarStrip
-          scrollable
-          style={{padding: 30}}
-          calendarColor={'#FFF'}
-          calendarHeaderStyle={{color: '#000'}}
-          dateNumberStyle={{color: '#000'}}
-          dateNameStyle={{color: '#000'}}
-          iconContainer={{flex: 0.1}}
-        /> */}
         <Text style={styles.Morning_Text}>Morning 08:00 am </Text>
 
-        <FlatList data={data2} renderItem={MorningSchedule} />
+        <FlatList data={data2} renderItem={MorningSchedule}     showsHorizontalScrollIndicator={false} />
 
         <Text style={styles.Morning_Text}>Afternoon 02:00 pm </Text>
 
-        <FlatList data={data3} renderItem={Afternoon} />
+        <FlatList data={data3} renderItem={Afternoon}  showsHorizontalScrollIndicator={false} />
 
         <Text style={styles.Morning_Text}>Night 09:00 pm </Text>
 
-        <FlatList data={data4} renderItem={NigthShift} />
+        <FlatList data={data4} renderItem={NigthShift}  showsHorizontalScrollIndicator={false} />
       </View>
     </View>
   );

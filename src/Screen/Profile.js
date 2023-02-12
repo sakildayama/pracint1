@@ -58,7 +58,10 @@ const Profile = ({navigation}) => {
 
   return (
     <View style={{flex: 1, borderColor: colors.WHITE}}>
-      <Image style={styles.Imagelessthan} source={IconPath.lessthan} />
+      <TouchableOpacity onPress={()=>navigation.navigate("Home")}>
+        <Image style={styles.Imagelessthan} source={IconPath.lessthan} />
+      </TouchableOpacity>
+
       <View style={[styles.Profile_View, {marginTop: 10}]}>
         <View style={styles.box}>
           <Image style={styles.Imagewoman} source={IconPath.girlsprofile} />
@@ -111,7 +114,9 @@ const Profile = ({navigation}) => {
         <Text style={styles.SettingText}>Doctor</Text>
         <View style={styles.Device_Container}>
           <View style={styles.Doctor_Container}>
+            <TouchableOpacity>
             <Image style={styles.PlusImage} source={IconPath.plusBlue} />
+            </TouchableOpacity>
             <Text style={{fontWeight: 'bold', color: 'black', marginTop: 10}}>
               Add Your Doctor
             </Text>

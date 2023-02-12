@@ -110,12 +110,9 @@ const ReportScreen = () => {
           <Text style={{color: colors.black}}>{item.day}</Text>
         </View>
         <View style={styles.box1}>
-          <Image
-            style={[
-              styles.InputIcons,
-              {tintColor: item.TextTeken == 'Missed' ? 'red' : 'lime'},
-            ]}
-            source={item.ImageBell}
+          <Image style={[{tintColor: item.TextTeken == 'Missed' ? 'green' : 'blue'},styles.InputIcons,]}
+          source={item.ImageBell}
+            // style={[{tintColor: item.TextTeken == 'Missed' ? 'red' : 'lime'},styles.InputIcons,]}source={item.ImageBell}
           />
           <Text style={{color: colors.black}}>{item.TextTeken}</Text>
         </View>
